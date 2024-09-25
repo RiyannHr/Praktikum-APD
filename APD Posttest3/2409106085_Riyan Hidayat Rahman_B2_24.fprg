@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.18">
+    <function name="Main" type="None" variable="">
+        <parameters />
+        <body>
+            <declare name="berat, tinggi, bmi" type="Real" array="False" size="" />
+            <output expression="&quot;Masukkan berat badan (kg): &quot;" newline="True" />
+            <input variable="berat" />
+            <output expression="&quot;Masukkan tinggi badan (m): &quot;" newline="True" />
+            <input variable="tinggi" />
+            <assign variable="bmi" expression="berat / (tinggi * tinggi)" />
+            <if expression="bmi &lt; 18.5">
+                <then>
+                    <output expression="&quot;BMI: &quot; &amp; bmi &amp; &quot; - Underweight&quot;" newline="True" />
+                </then>
+                <else>
+                    <if expression="bmi &lt; 24.9">
+                        <then>
+                            <output expression="&quot;BMI: &quot; &amp; bmi &amp; &quot; - Normal weight&quot;" newline="True" />
+                        </then>
+                        <else>
+                            <if expression="bmi &lt; 29.9">
+                                <then>
+                                    <output expression="&quot;BMI: &quot; &amp; bmi &amp; &quot; - Overweight&quot;" newline="True" />
+                                </then>
+                                <else>
+                                    <output expression="&quot;BMI: &quot; &amp; bmi &amp; &quot; - Obesity&quot;" newline="True" />
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
