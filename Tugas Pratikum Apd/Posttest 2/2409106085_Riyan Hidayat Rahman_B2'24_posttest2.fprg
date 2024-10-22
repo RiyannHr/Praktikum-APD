@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106085_Riyan Hidayat Rahman_B2'24"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 03:51:31 PM"/>
+        <attribute name="created" value="TEVOT1ZPIExPUTtSSVlBTjsyMDI0LTA5LTE4OzAzOjUxOjA3IFBNOzI0MDg="/>
+        <attribute name="edited" value="TEVOT1ZPIExPUTtSSVlBTjsyMDI0LTA5LTE4OzAzOjUxOjMxIFBNOzE7MjUxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namaBarang" type="String" array="False" size=""/>
+            <declare name="hargaBarang, jumlahBarang, diskon, totalSebelumDiskon, totalDiskon, totalBayar, sisaBagi" type="Real" array="False" size=""/>
+            <input variable="namaBarang"/>
+            <output expression="&quot;Masukkan Harga Barang (angka desimal, contoh: 10000.50):&quot;" newline="True"/>
+            <input variable="hargaBarang"/>
+            <output expression="&quot;Masukkan Jumlah Barang (bilangan bulat):&quot;" newline="True"/>
+            <input variable="jumlahBarang"/>
+            <output expression="&quot;Masukkan Dua Digit Terakhir NIM Sebagai Diskon (misal: 85 untuk 85%):&quot;" newline="True"/>
+            <input variable="diskon"/>
+            <assign variable="totalSebelumDiskon" expression="jumlahBarang * hargaBarang"/>
+            <assign variable="totalDiskon" expression="(diskon / 100) * totalSebelumDiskon"/>
+            <assign variable="totalBayar" expression="totalSebelumDiskon - totalDiskon"/>
+            <assign variable="sisaBagi" expression="diskon % 3"/>
+            <output expression="&quot;Anda membeli &quot;" newline="False"/>
+            <output expression="ToString(jumlahBarang)" newline="False"/>
+            <output expression="&quot; &quot;" newline="False"/>
+            <output expression="namaBarang" newline="False"/>
+            <output expression="&quot; dengan harga satuan &quot;" newline="False"/>
+            <output expression="ToString(hargaBarang)" newline="True"/>
+            <output expression="&quot;Total sebelum diskon adalah &quot;" newline="False"/>
+            <output expression="ToString(totalSebelumDiskon)" newline="False"/>
+            <output expression="&quot;, total diskon adalah &quot;" newline="False"/>
+            <output expression="ToString(totalDiskon)" newline="False"/>
+            <output expression="&quot;, dan total yang harus dibayar adalah &quot;" newline="False"/>
+            <output expression="ToString(totalBayar)" newline="True"/>
+            <output expression="ToString(diskon)" newline="False"/>
+            <output expression="&quot; dibagi dengan 3 sisanya &quot;" newline="False"/>
+            <output expression="ToString(sisaBagi)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
